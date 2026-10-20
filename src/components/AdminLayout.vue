@@ -25,6 +25,19 @@
           {{ $t('menu.home') }}
         </a-menu-item>
 
+        <a-sub-menu key="/ai">
+          <template #icon><RobotOutlined /></template>
+          <template #title>{{ $t('menu.ai') }}</template>
+          <a-menu-item key="/ai/train" @click="$router.push('/ai/train')">
+            <template #icon><ExperimentOutlined /></template>
+            {{ $t('menu.aiTrain') }}
+          </a-menu-item>
+          <a-menu-item key="/ai/test" @click="$router.push('/ai/test')">
+            <template #icon><CheckSquareOutlined /></template>
+            {{ $t('menu.aiTest') }}
+          </a-menu-item>
+        </a-sub-menu>
+
         <!-- 子菜单 -->
         <a-sub-menu key="/setting">
           <template #icon><SettingOutlined /></template>
@@ -113,7 +126,10 @@ import {
   SafetyOutlined,
   BookOutlined,
   ExclamationCircleOutlined,
-  GlobalOutlined
+  GlobalOutlined,
+  RobotOutlined,
+  ExperimentOutlined,
+  CheckSquareOutlined
 } from '@ant-design/icons-vue'
 
 const router = useRouter()

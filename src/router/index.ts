@@ -5,6 +5,8 @@ import User from '@/views/setting/User.vue'
 import Role from '@/views/setting/Role.vue'
 import Res from '@/views/setting/Res.vue'
 import Dict from '@/views/setting/Dict.vue'
+import AiTrain from '@/views/ai/Train.vue'
+import AiTest from '@/views/ai/Test.vue'
 import NotFound from '@/views/exception/404.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -37,6 +39,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/setting/dict',
     name: 'setting_dict',
     component: Dict
+  },
+  {
+    path: '/ai/train',
+    name: 'ai_train',
+    component: AiTrain
+  },
+  {
+    path: '/ai/test',
+    name: 'ai_test',
+    component: AiTest
   },
   // 添加新模块示例（订单模块）
   // {
